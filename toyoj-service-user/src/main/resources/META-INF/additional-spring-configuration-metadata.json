@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "toyoj.path.domain",
+      "type": "java.lang.String",
+      "description": "Description for toyoj.path.domain."
+  }
+] }

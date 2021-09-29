@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="toyoj-common" />
+        <module name="mybatis-generator-database" />
+        <module name="toyoj-service-api" />
+        <module name="toyoj-model" />
+        <module name="toyoj-service-user" />
+        <module name="toyoj-service-search" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="mybatis-generator-database" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="mybatis-generator-database" options="-parameters" />
+      <module name="toyoj" options="" />
+      <module name="toyoj-common" options="-parameters" />
+      <module name="toyoj-model" options="-parameters" />
+      <module name="toyoj-service-api" options="-parameters" />
+      <module name="toyoj-service-search" options="-parameters" />
+      <module name="toyoj-service-user" options="-parameters" />
+    </option>
+  </component>
+</project>

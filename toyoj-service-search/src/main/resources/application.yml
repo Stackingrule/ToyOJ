@@ -1,0 +1,9 @@
+spring:
+  data:
+    elasticsearch:
+      cluster-name: toyoj-elasticsaerch
+      cluster-nodes: 127.0.0.1:9300
+server:
+  port: 8006
+  tomcat:
+    uri-encoding: UTF-8

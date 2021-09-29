@@ -1,0 +1,13 @@
+com\nowcode\user\Test.class
+com\nowcode\user\Test$1.class
+com\nowcode\entity\UserExample$GeneratedCriteria.class
+com\nowcode\mybatis\utils\ArticleGenerator.class
+com\nowcode\mymapper\MyMapper.class
+com\nowcode\user\Test$Grid.class
+com\nowcode\user\mapper\UserMapper.class
+com\nowcode\entity\UserExample$Criterion.class
+com\nowcode\mybatis\utils\UserGenerator.class
+com\nowcode\entity\UserExample.class
+com\nowcode\entity\UserExample$Criteria.class
+com\nowcode\entity\User.class
+com\nowcode\mybatis\utils\AdminGenerator.class

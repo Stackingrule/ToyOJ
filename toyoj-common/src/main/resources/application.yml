@@ -1,0 +1,24 @@
+############################################################
+#
+# 邮箱服务配置
+# web访问端口号  约定：8003
+#
+############################################################
+
+# 邮箱配置
+spring:
+  mail:
+    host: smtp.qq.com
+    port: 465
+    password: xxxxxx
+    username: xxxxxxx
+    protocol: smtps
+    properties:
+      mail:
+        smtp:
+          ssl:
+            enable: true
+          socketFactoryClass: javax.net.ssl.SSLSocketFactory
+    default-encoding: UTF-8
+
+

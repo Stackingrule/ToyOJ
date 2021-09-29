@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <context id="MysqlContext" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+
+        <!-- 自动检查关键字，为关键字增加反引号 -->
+        <property name="autoDelimitKeywords" value="true"/>
+        <property name="beginningDelimiter" value="`"/>
+        <property name="endingDelimiter" value="`"/>
+
+
+        <!--覆盖生成XML文件-->
+        <plugin type="org.mybatis.generator.plugins.UnmergeableXmlMappersPlugin" />
+        <!-- 生成的实体类添加toString()方法 -->
+        <plugin type="org.mybatis.generator.plugins.ToStringPlugin"/>
+
+
+        <!-- 通用mapper所在目录 -->
+        <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+            <property name="mappers" value="com.nowcode.mymapper.MyMapper"/>
+        </plugin>
+
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/toyoj?characterEncoding=utf8&amp;useSSL=true"
+                        userId="root"
+                        password="bd1998">
+        </jdbcConnection>
+
+        <!-- 对应生成的pojo所在包 -->
+        <javaModelGenerator targetPackage="com.nowcode.entity" targetProject="mybatis-generator-database/src/main/java"/>
+
+		<!-- 对应生成的mapper所在目录 -->
+        <sqlMapGenerator targetPackage="mapper.user" targetProject="mybatis-generator-database/src/main/resources"/>
+
+		<!-- 配置mapper对应的java映射 -->
+        <javaClientGenerator targetPackage="com.nowcode.user.mapper" targetProject="mybatis-generator-database/src/main/java" type="XMLMAPPER"/>
+
+        <!-- 数据库表 -->
+        <table tableName="user"></table>
+    </context>
+</generatorConfiguration>
+
+
+<!--<generatorConfiguration>-->
+<!--<context id="Mysql" targetRuntime="MyBatis3" defaultModelType="flat">-->
+
+<!--    &lt;!&ndash; 自动检查关键字，为关键字增加反引号 &ndash;&gt;-->
+<!--    <property name="autoDelimitKeywords" value="true"/>-->
+<!--    <property name="beginningDelimiter" value="`"/>-->
+<!--    <property name="endingDelimiter" value="`"/>-->
+
+<!--    &lt;!&ndash;覆盖生成XML文件&ndash;&gt;-->
+<!--    <plugin type="org.mybatis.generator.plugins.UnmergeableXmlMappersPlugin" />-->
+<!--    &lt;!&ndash; 生成的实体类添加toString()方法 &ndash;&gt;-->
+<!--    <plugin type="org.mybatis.generator.plugins.ToStringPlugin"/>-->
+
+<!--    &lt;!&ndash; 不生成注释 &ndash;&gt;-->
+<!--    <commentGenerator>-->
+<!--        <property name="suppressAllComments" value="true"/>-->
+<!--    </commentGenerator>-->
+
+<!--    <jdbcConnection driverClass="com.mysql.jdbc.Driver"-->
+<!--                    connectionURL="jdbc:mysql://localhost:3306/toyoj?characterEncoding=utf8&amp;useSSL=true"-->
+<!--                    userId="root"-->
+<!--                    password="bd1998">-->
+<!--    </jdbcConnection>-->
+
+<!--    &lt;!&ndash; domain类的位置 &ndash;&gt;-->
+<!--    <javaModelGenerator targetProject="src\main\java"-->
+<!--                        targetPackage="com.jiawa.wiki.domain"/>-->
+
+<!--    &lt;!&ndash; mapper xml的位置 &ndash;&gt;-->
+<!--    <sqlMapGenerator targetProject="src\main\resources"-->
+<!--                     targetPackage="mapper"/>-->
+
+<!--    &lt;!&ndash; mapper类的位置 &ndash;&gt;-->
+<!--    <javaClientGenerator targetProject="src\main\java"-->
+<!--                         targetPackage="com.jiawa.wiki.mapper"-->
+<!--                         type="XMLMAPPER"/>-->
+
+<!--    &lt;!&ndash;<table tableName="demo" domainObjectName="Demo"/>&ndash;&gt;-->
+<!--    &lt;!&ndash;<table tableName="ebook"/>&ndash;&gt;-->
+<!--    &lt;!&ndash;<table tableName="category"/>&ndash;&gt;-->
+<!--    &lt;!&ndash;<table tableName="doc"/>&ndash;&gt;-->
+<!--    &lt;!&ndash;<table tableName="content"/>&ndash;&gt;-->
+<!--    &lt;!&ndash;<table tableName="user"/>&ndash;&gt;-->
+<!--    <table tableName="ebook_snapshot"/>-->
+<!--</context>-->
+<!--</generatorConfiguration>-->
